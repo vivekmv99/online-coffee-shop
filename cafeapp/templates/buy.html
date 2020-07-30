@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+{% load static %}
+<head>
+        <title>Luigi's</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'fonts/beyond_the_mountains-webfont.css' %}" type="text/css"/>
+
+        <!-- Stylesheets -->
+        <link href="{% static 'plugin-frameworks/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'plugin-frameworks/swiper.css' %}" rel="stylesheet">
+        <link href="{% static 'fonts/ionicons.css' %}" rel="stylesheet">
+        <link href="{% static 'common/styles.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+        <div class="container">
+                <a class="logo" href="#"><img src="{% static 'images/logo-white.png' %}" alt="Logo"></a>
+
+                <div class="right-area">
+                     <!--<h6><a class="plr-20 color-white btn-fill-primary" href="#">{{id}}</a></h6>-->
+                        <h6><a class="plr-20 color-white btn-fill-primary" href="#">{{username}}</a>
+                                <a class="plr-20 color-white btn-fill-primary" href="{% url 'log' %}">Log out</a></h6>
+                        <!--<h6><a class="plr-20 color-white btn-fill-primary" href="#">{{id}}</a></h6>-->
+                    <!--<h6><a class="plr-20 color-white btn-fill-primary" href="#">{{itemname}}</a></h6>-->
+                </div><!-- right-area -->
+
+                <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+                <ul class="main-menu font-mountainsre" id="main-menu">
+                        <li><a href="{% url 'hello' %}">HOME</a></li>
+                        <li><a href="02_about_us.html">ABOUT US</a></li>
+                        <li><a href="03_menu.html">SERVICES</a></li>
+                        <li><a href="04_blog.html">NEWS</a></li>
+                        <li><a href="#register">{{it_quantity}}</a></li>
+                </ul>
+
+                <div class="clearfix"></div>
+        </div><!-- container -->
+</header><br><br><br><br><br><br>
+<footer class="pb-50  pt-70 pos-relative">
+        <div class="pos-top triangle-bottom"></div>
+        <div class="container-fluid">
+                <a href="index.html"><img src="{% static 'images/logo-white.png' %}" alt="Logo"></a>
+
+                <div class="pt-30">
+                        <p class="underline-secondary"><h3>ORDER SUCCESSFUL !!</h3></p>
+                        <h4>ITEM NAME : {{ itemname }}</h4> </p>
+                        <h4>ITEM PRICE : {{ itemprice }}Rs</h4> </p>
+                        <h4>ITEM QUANTITY: {{ quantity }}</h4> </p>
+                        <h4>TOTAL PRICE : {{ total }}Rs</h4> </p>
+                        <p class="underline-secondary">THANK YOU !!</p>
+                        <p class="underline-secondary">YOUR ORDER IS ON THE WAY!!</p>
+                </div>
+
+                <!--<div class="pt-30">-->
+                        <!--<p class="underline-secondary mb-10"><b>Phone:</b></p>-->
+                        <!--<a href="tel:+53 345 7953 32453 ">+53 345 7953 32453 </a>-->
+                <!--</div>-->
+
+                <!--<div class="pt-30">-->
+                        <!--<p class="underline-secondary mb-10"><b>Email:</b></p>-->
+                        <!--<a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>-->
+                <!--</div>-->
+
+                <!--<ul class="icon mt-30">-->
+                        <!--<li><a href="#"><i class="ion-social-pinterest"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ion-social-facebook"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ion-social-twitter"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ion-social-linkedin"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ion-social-vimeo"></i></a></li>-->
+                <!--</ul>-->
+
+                <p class="color-light font-9 mt-50 mt-sm-30"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+<!--&lt;!&ndash;&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;</p>&ndash;&gt;-->
+        </div><!-- container -->
+</footer>
